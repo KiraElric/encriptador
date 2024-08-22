@@ -33,6 +33,13 @@ function validacionTexto(input){
     }
 }
 
+function resultOperation(){
+    removerElemento("#imagen-muñeco");
+    removerElemento("#titulo-mensaje");
+    insertarElemento("#copiar");
+    limpiarInput();
+}
+
 function encriptarTexto(){
     const input = document.getElementById("textoIngresado").value;
     
@@ -57,10 +64,7 @@ function encriptarTexto(){
         }
         let phraseEncripted = document.getElementById("visualizar_texto");
         phraseEncripted.innerHTML = phrases.join("");
-        removerElemento("#imagen-muñeco");
-        removerElemento("#titulo-mensaje");
-        insertarElemento("#copiar");
-        limpiarInput();
+        resultOperation();
     }
 }
 
@@ -87,10 +91,7 @@ function desencriptarTexto(){
         }
         let phraseDesencripted = document.getElementById("visualizar_texto");
         phraseDesencripted.innerHTML = phrases.join(" ");
-        removerElemento("#imagen-muñeco");
-        removerElemento("#titulo-mensaje");
-        insertarElemento("#copiar");
-        limpiarInput();
+        resultOperation();
     }
 }
 function copiarTexto(){
