@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <script src="https://kit.fontawesome.com/19a0eb66ab.js" crossorigin="anonymous"></script>
+    <title>Challenge</title>
+</head>
+<body>
+    <header class="header">
+        <img src="./assets/img/Logo.png" alt="Logo-Alura">
+    </header> 
+
+    <div class="container_contenido">
+        <div class="container_encriptador">
+            <textarea type="text" class="contenido_texto_input" id="textoIngresado" name="textoIngresado" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+            <div class="encriptador_mensaje_inferior">
+                <span class="contenido_span"><i class="fa-solid fa-circle-exclamation"></i> Solo letras minúsculas y sin acentos</span>
+                <div class="contenido_botones">
+                    <button onclick="encriptarTexto()" class="contenido_boton">Encriptar</button>
+                    <button onclick="desencriptarTexto()" class="contenido_boton" id="desencriptar">Desencriptar</button>
+                </div>
+            </div>
+        </div>
+        <div class="container_mostrar">
+            <img src="./assets/img/Muñeco.png" alt="Muñeco" id="imagen-muñeco">
+            <div class="mostrar_texto_desencriptado">
+                <p class="contenido_mostrar_mensaje" id="titulo-mensaje"></p>
+                <p class="contenido_mostrar_texto" id="visualizar_texto"></p>
+            </div>
+            <div class="contenido_botones">
+                <button onclick="copiarTexto()" class="contenido_boton" id="copiar">Copiar</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Desarrollado por Lissette Urso - Agosto 2024</p>
+    </footer>
+
+    <script src="./assets/js/app.js" defer></script>
+</body>
+</html>
