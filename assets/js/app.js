@@ -20,6 +20,10 @@ function condicionesIniciales(){
     removerElemento("#copiar");
 }
 
+function limpiarInput(){
+    return document.querySelector("#textoIngresado").value = "";
+}
+
 function validacionTexto(input){
     if(regExp.test(input)){
         return true;
@@ -56,6 +60,7 @@ function encriptarTexto(){
         removerElemento("#imagen-muñeco");
         removerElemento("#titulo-mensaje");
         insertarElemento("#copiar");
+        limpiarInput();
     }
 }
 
@@ -85,11 +90,12 @@ function desencriptarTexto(){
         removerElemento("#imagen-muñeco");
         removerElemento("#titulo-mensaje");
         insertarElemento("#copiar");
+        limpiarInput();
     }
 }
-
 function copiarTexto(){
-    
+    let texto = document.getElementById("visualizar_texto").innerHTML;
+    navigator.clipboard.writeText(texto);
 }
 
 condicionesIniciales();

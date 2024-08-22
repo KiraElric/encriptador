@@ -127,7 +127,7 @@ body{
     font-size: var(--font-size-texto-secundario);
 }
 
-@media(375px < width <= 768px){
+@media(480px < width <= 768px){
     .container_contenido{
         flex-direction: column;
         gap: 64px;
@@ -152,7 +152,7 @@ body{
     }
 }
 
-@media(max-width: 375px) {
+@media(max-width: 480px) {
     .container_contenido{
         flex-direction: column;
         gap: 64px;
